@@ -78,10 +78,14 @@ VSCode を起動し，クローンしたリポジトリのフォルダを開い�
 
 ### コンテナイメージ
 
-TeXLive 公式が配布している `texlive/texlive:latest` イメージの使用を強く推奨します．
+TeXLive 公式が配布している `texlive/texlive` イメージの使用を強く推奨します．
 
 > [!CAUTION]
 > Qiita や Zenn などでおすすめされている怪しいイメージは使用してはいけません．
+
+> [!TIP]
+> [Docker Hub のページ](https://hub.docker.com/r/texlive/texlive) に書いてあることですが， `texlive/texlive` は `registry.gitlab.com/islandoftex/images/texlive` のミラーです．
+> とはいえ基本的には Docker Hub の `texlive/texlive` を使うほうが無難だと思いますが．
 
 ### Git の改行コードの問題を解決するための設定
 
