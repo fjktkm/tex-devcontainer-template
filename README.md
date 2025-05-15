@@ -2,14 +2,15 @@
 
 LaTeX の執筆を快適に行うための開発コンテナのテンプレートです．
 なるべくシンプルで汎用的に使えることを心がけています．
+改善点や要望があれば，お気軽に Issue や Pull Request でお知らせください．
 
-## ✅ Requirements
+## ✅ 動作要件
 
 動作に必要なものは次のとおりです：
 
-- [Docker Desktop](https://www.docker.com/)
-- [Visual Studio Code（VSCode）](https://code.visualstudio.com/)
-- [Remote Development Extension Pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
+- [ ] [Docker Desktop](https://www.docker.com/)
+- [ ] [Visual Studio Code（VSCode）](https://code.visualstudio.com/)
+- [ ] [Remote Development Extension Pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
 
 ### Docker Desktop
 
@@ -34,7 +35,7 @@ VSCode の [公式ドキュメント](https://code.visualstudio.com/docs/getstar
 > [!NOTE]
 > Remote Development Extension Pack は，デフォルトでインストールされている場合があります．
 
-## 🚀 Usage
+## 🚀 使い方
 
 ### 1. リポジトリのクローン
 
@@ -56,7 +57,7 @@ VSCode を起動し，クローンしたリポジトリのフォルダを開い�
 ポップアップが表示されたら，「コンテナーで再度開く」をクリックしてください．
 開発コンテナの初回起動時には，コンテナイメージのダウンロードが行われるため，少し時間がかかります．
 
-> [!TIP]
+> [!NOTE]
 > ポップアップが表示されない場合は，ウィンドウの左下にある「><」アイコンをクリックし，「コンテナーで再度開く」を選択してください．
 > Ctrl + Shift + P を押してコマンドパレットを開き，「開発コンテナ: コンテナーで再度開く」を選択することでも開くことができます．
 
@@ -73,11 +74,11 @@ VSCode を起動し，クローンしたリポジトリのフォルダを開い�
 > TeX ファイルのウィンドウの右上に表示される「LaTeX PDF ファイルを表示」ボタンをクリックすることでも PDF が表示されます．
 > ほかにも Ctrl + Alt + V を押すという方法もあります．
 
-## ⚙️ Settings
+## ⚙️ 設定
 
 ### コンテナイメージ
 
-このリポジトリでは TeXLive 公式が配布している `texlive/texlive:latest` イメージの使用を強く推奨します．
+TeXLive 公式が配布している `texlive/texlive:latest` イメージの使用を強く推奨します．
 
 > [!CAUTION]
 > Qiita や Zenn などでおすすめされている怪しいイメージは使用してはいけません．
