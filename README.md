@@ -17,15 +17,15 @@ LaTeX の執筆を快適に行うための開発コンテナのテンプレー�
 [公式ドキュメント](https://docs.docker.com/get-started/) の手順に従って Docker Desktop をインストールしてください．
 
 > [!TIP]
-> Windows の場合は [Microsoft Store](https://apps.microsoft.com/detail/XP8CBJ40XLBWKX?hl=ja&gl=JP&ocid=pdpshare) からのインストールがおすすめです．
+> ちょうど最近 [Microsoft Store 版](https://apps.microsoft.com/detail/XP8CBJ40XLBWKX?hl=ja&gl=JP&ocid=pdpshare) がリリースされました（2025 年 5 月時点）．
+> Windows の場合これからはこちらを使うのが良いでしょう．
 
 ### VSCode
 
 [公式ドキュメント](https://code.visualstudio.com/docs/setup/setup-overview) の手順に従って VSCode をインストールしてください．
 
 > [!TIP]
-> ちょうど最近 Microsoft Store 版がリリースされました（2025 年 5 月時点）．
-> Windows の場合これからは [Microsoft Store 版](https://apps.microsoft.com/detail/XP9KHM4BK9FZ7Q?hl=ja&gl=JP&ocid=pdpshare) を使うのが良いでしょう．
+> Windows の場合は [Microsoft Store](https://apps.microsoft.com/detail/XP9KHM4BK9FZ7Q?hl=ja&gl=JP&ocid=pdpshare) からのインストールがおすすめです．
 
 ### Remote Development Extension Pack
 
