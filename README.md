@@ -4,30 +4,26 @@ LaTeX の執筆を快適に行うための開発コンテナのテンプレー�
 なるべくシンプルで汎用的に使えることを心がけています．
 改善点や要望があれば，お気軽に Issue や Pull Request でお知らせください．
 
-## ✅ 動作要件
+# ✅ 動作要件
 
 動作に必要なものは次のとおりです：
 
-- [ ] [Docker Desktop](https://www.docker.com/)
-- [ ] [Visual Studio Code（VSCode）](https://code.visualstudio.com/)
-- [ ] [Remote Development Extension Pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
+- [Docker Desktop](https://www.docker.com/)
+- [Visual Studio Code（VSCode）](https://code.visualstudio.com/)
+- [Remote Development Extension Pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
 
-### Docker Desktop
+## Docker Desktop
 
 [公式ドキュメント](https://docs.docker.com/get-started/) の手順に従って Docker Desktop をインストールしてください．
+ちょうど最近 [Microsoft Store 版](https://apps.microsoft.com/detail/XP8CBJ40XLBWKX?hl=ja&gl=JP&ocid=pdpshare) がリリースされました（2025 年 5 月時点）．
+Windows の場合これからはこちらを使うのが良いでしょう．
 
-> [!TIP]
-> ちょうど最近 [Microsoft Store 版](https://apps.microsoft.com/detail/XP8CBJ40XLBWKX?hl=ja&gl=JP&ocid=pdpshare) がリリースされました（2025 年 5 月時点）．
-> Windows の場合これからはこちらを使うのが良いでしょう．
-
-### VSCode
+## VSCode
 
 [公式ドキュメント](https://code.visualstudio.com/docs/setup/setup-overview) の手順に従って VSCode をインストールしてください．
+Windows の場合は [Microsoft Store](https://apps.microsoft.com/detail/XP9KHM4BK9FZ7Q?hl=ja&gl=JP&ocid=pdpshare) からのインストールがおすすめです．
 
-> [!TIP]
-> Windows の場合は [Microsoft Store](https://apps.microsoft.com/detail/XP9KHM4BK9FZ7Q?hl=ja&gl=JP&ocid=pdpshare) からのインストールがおすすめです．
-
-### Remote Development Extension Pack
+## Remote Development Extension Pack
 
 VSCode に [Remote Development Extension Pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack) をインストールしてください．
 VSCode の [公式ドキュメント](https://code.visualstudio.com/docs/getstarted/extensions) を参考にインストールしてください．
@@ -35,23 +31,19 @@ VSCode の [公式ドキュメント](https://code.visualstudio.com/docs/getstar
 > [!NOTE]
 > Remote Development Extension Pack は，デフォルトでインストールされている場合があります．
 
-## 🚀 使い方
+# 🚀 使い方
 
-### 1. リポジトリのクローン
+## 1. リポジトリのクローン
 
 お好きな方法で構いませんが，このリポジトリをローカルにクローンしてください．
+個人的には [GitHub Desktop](https://desktop.github.com/) を使う方法がおすすめです．
 
-> [!TIP]
-> 個人的には [GitHub Desktop](https://desktop.github.com/) を使う方法がおすすめです．
-
-### 2. VSCode でリポジトリを開く
+## 2. VSCode でリポジトリを開く
 
 VSCode を起動し，クローンしたリポジトリのフォルダを開いてください．
+GitHub Desktop でクローンした場合は，クローン完了時に表示される「Open in Visual Studio Code」ボタンをクリックするのが楽なのでおすすめです．
 
-> [!TIP]
-> GitHub Desktop でクローンした場合は，クローン完了時に表示される「Open in Visual Studio Code」ボタンをクリックするのが楽なのでおすすめです．
-
-### 3. 開発コンテナで開く
+## 3. 開発コンテナで開く
 
 リポジトリを開くと VSCode が `.devcontainer` フォルダを検出し，開発コンテナで開くかどうかを尋ねるポップアップが表示されます．
 ポップアップが表示されたら，「コンテナーで再度開く」をクリックしてください．
@@ -61,7 +53,7 @@ VSCode を起動し，クローンしたリポジトリのフォルダを開い�
 > ポップアップが表示されない場合は，ウィンドウの左下にある「><」アイコンをクリックし，「コンテナーで再度開く」を選択してください．
 > Ctrl + Shift + P を押してコマンドパレットを開き，「開発コンテナ: コンテナーで再度開く」を選択することでも開くことができます．
 
-### 4. LaTeX ファイルを編集する
+## 4. LaTeX ファイルを編集する
 
 開発コンテナが起動したら，すぐに LaTeX の執筆を始めることができます．
 サンプルとして `LuaLaTeX`，`pLaTeX`，`upLaTeX` のプロジェクトを用意してあります．
@@ -74,9 +66,9 @@ VSCode を起動し，クローンしたリポジトリのフォルダを開い�
 > TeX ファイルのウィンドウの右上に表示される「LaTeX PDF ファイルを表示」ボタンをクリックすることでも PDF が表示されます．
 > ほかにも Ctrl + Alt + V を押すという方法もあります．
 
-## ⚙️ 設定
+# ⚙️ 設定
 
-### コンテナイメージ
+## コンテナイメージ
 
 TeXLive 公式が配布している `texlive/texlive` イメージの使用を強く推奨します．
 
@@ -87,7 +79,7 @@ TeXLive 公式が配布している `texlive/texlive` イメージの使用を�
 > [Docker Hub のページ](https://hub.docker.com/r/texlive/texlive) に書いてあることですが， `texlive/texlive` は `registry.gitlab.com/islandoftex/images/texlive` のミラーです．
 > とはいえ基本的には Docker Hub の `texlive/texlive` を使うほうが無難だと思いますが．
 
-### Git の改行コードの問題を解決するための設定
+## Git の改行コードの問題を解決するための設定
 
 Git の改行コードの問題を解決するために，次のような `.gitattributes` ファイルを追加しています．
 
@@ -104,7 +96,7 @@ Git の改行コードの問題を解決する方法はいろいろあるので�
 > このリポジトリでは BAT ファイルなどは使用していないので実のところ 1 行目だけで問題ないです．
 > しかし，あえてテンプレを変更する必要もないのでそのままにしています．
 
-### 中間生成物をローカルにバインドしない設定
+## 中間生成物をローカルにバインドしない設定
 
 LaTeX のコンパイル時に生成される中間生成物は，ある種のキャッシュでありローカル環境に保存する必要はありません．
 コンパイル結果が雑多であると管理が煩雑になりますし，OneDrive などのクラウドストレージを使用している場合には無駄な同期が発生してしまいます．
@@ -150,7 +142,7 @@ $aux_dir = '../build';
 この設定により，最終生成物の保存先の変更を `LaTeX Workshop` 拡張機能に伝えています．
 もしこの設定をしないと，ライブプレビューなど一部の機能が上手く動作しません．
 
-### `latexmk` の設定
+## `latexmk` の設定
 
 `LaTeX Workshop` 拡張機能には `.latexmkrc` なしでもコンパイルできるレシピが用意されていますが，このリポジトリでは `.latexmkrc` を挟む方法を採用しています．
 これは次のような理由によるものです：
@@ -176,7 +168,7 @@ $lualatex = 'lualatex -synctex=1 -interaction=nonstopmode %O %S';
 > `-interaction=nonstopmode` については `LaTeX Workshop` 拡張機能の都合によるものです．
 > カスタマイズする際は引っ掛かりやすい点なので注意してください．
 
-### LaTeX エンジン
+## LaTeX エンジン
 
 このリポジトリでは，次の LaTeX エンジンのサンプルを用意しています：
 
