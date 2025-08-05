@@ -56,7 +56,7 @@ GitHub Desktop でクローンした場合は，クローン完了時に表示�
 ## 4. LaTeX ファイルを編集する
 
 開発コンテナが起動したら，すぐに LaTeX の執筆を始めることができます．
-サンプルとして `LuaLaTeX`，`pLaTeX`，`upLaTeX` のプロジェクトを用意してあります．
+サンプルとして `LuaLaTeX`，`pLaTeX`，`upLaTeX`, `pdfLaTeX` のプロジェクトを用意してあります．
 ファイルを編集し保存すると自動でコンパイルが開始され，`dist/` フォルダに PDF が生成されます．
 
 `dist/` フォルダに生成された PDF をクリックすると，PDF が表示されます．
@@ -175,9 +175,11 @@ $lualatex = 'lualatex -synctex=1 -interaction=nonstopmode %O %S';
 - LuaLaTeX
 - pLaTeX
 - upLaTeX
+- pdfLaTeX
 
 大学のレポートなどで利用する際には LuaLaTeX を使用することを強く推奨します．
 pLaTeX や upLaTeX は学会のスタイルファイルを使用する場合など，どうしても必要な場合にのみ使用してください．
+pdfLaTeX は英語の論文などに利用してください．
 
 ## 文書クラス
 
@@ -186,3 +188,5 @@ pLaTeX や upLaTeX は学会のスタイルファイルを使用する場合な�
 
 > [!TIP]
 > LaTeX の学習リソースについては [Learn LaTeX（日本語版）](https://www.learnlatex.org/ja/) もおすすめです．
+
+なお `pdfLaTeX` についてはそもそも日本語に対応していないため `article` クラスを指定しています．
