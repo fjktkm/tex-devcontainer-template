@@ -1,0 +1,53 @@
+name: release
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: texlive/texlive:latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Compile LaTeX
+        run: |
+            cd lualatex && latexmk && cd ..
+            cd uplatex && latexmk && cd ..
+            cd platex && latexmk && cd ..
+            cd pdflatex && latexmk && cd ..
+
+      - name: Upload PDFs artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: pdfs
+          path: dist/*.pdf
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Download PDF artifact
+        uses: actions/download-artifact@v5
+        with:
+          name: pdfs
+          path: .
+
+      - name: Create GitHub Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          tag="v${{ github.run_number }}"
+          gh release create "$tag" ./*.pdf --title "$tag" --generate-notes
